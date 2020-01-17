@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang=en>
+<meta charset=utf-8>
+<title>Privacy Community Group Charter</title>
+<meta name=viewport content="width=device-width">
+<link rel=stylesheet href=https://www.w3.org/StyleSheets/TR/base>
+<style>
+  body {
+    max-width: 90ch;
+    margin: auto;
+  }
+  dt {
+    margin: 0.5em 0;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  th, td {
+    border: 1px solid black;
+    padding: 0.25em;
+    text-align: center;
+  }
+  th {
+    color: #005A9C;
+  }
+  @media screen {
+    thead th {
+      background: #005a9c;
+      color: #fff;
+    }
+  }
+  *:target {
+    background-color: yellow;
+  }
+  .permalink {
+    color: #99f;
+    font-weight: normal;
+  }
+  .permalink {
+    display: block;
+    margin-left: -2ch;
+    float: left;
+  }
+  table .permalink {
+    display: inline;
+    margin-left: 0;
+    float: none;
+  }
+  .note, .example {
+    position: relative;
+    margin: 1.5em 0 1em;
+    padding: 1em;
+  }
+  .note::before, .example::before {
+    padding: 0.15em 0.25em;
+    position: absolute;
+    top: -0.8em;
+    left: -0.8em;
+  }
+  .note {
+    background-color: #dfd;
+    color: green;
+    font-style: italic;
+  }
+  .note::before {
+    background-color: green;
+    color: white;
+    font-style: normal;
+    content: "Note: ";
+  }
+  .example {
+    background-color: #eee;
+    color: #222;
+  }
+  .example::before {
+    background-color: #222;
+    color: white;
+    content: attr(title);
+  }
+  header img {
+    width: 50px;
+    height: 50px;
+    float: right;
+  }
+</style>
+<header>
+<img src="logo.svg" alt="">
+<h1>Privacy Community Group Charter</h1>
+</header>
+
+<h2 id=mission>Mission</h2>
+
+<p>The mission of the <a href=https://privacycg.github.io/>Privacy
+Community Group</a> is to develop privacy-focused web standards and APIs
+to improve user privacy on the web through enhanced browser behavior.
+
+<p>The group welcomes participation from browser vendors, privacy
+advocates, web application developers, and other interested parties.
+
+<h2 id=scope>Scope</h2>
+
+<p>The Community Group will discuss proposals for new privacy-focused
+web platform features intended to be implemented in browsers or similar
+user agents. The group will also discuss potential modifications of
+existing web platform features aimed at improving user privacy on the
+web.
+
+<h3 id=out-of-scope>Out of Scope</h3>
+
+<p>Features or ideas that don’t pertain to privacy and have
+applicability in a browser (or similar user agent) should be proposed
+elsewhere.
+
+<p class=note>This group does not perform
+<a href=https://www.w3.org/Guide/process/charter.html#horizontal-review>horizontal
+review</a> for privacy at <a href=https://www.w3.org/><abbr
+title="World Wide Web Consortium">W3C</abbr></a>; that is the
+responsibility of the
+<a href=https://www.w3.org/Privacy/IG/>Privacy Interest Group
+(PING)</a>.
+
+<h2 id=chairs>Chairs</h2>
+
+<p>The Chairs of the Privacy Community Group are:
+
+<ul>
+<li>Erik Anderson &lt;<a href=mailto:erik.anderson@microsoft.com>erik.anderson@microsoft.com</a>&gt; (<a href=https://www.microsoft.com/>Microsoft</a>)
+<li>Theresa O’Connor &lt;<a href=mailto:hober@apple.com>hober@apple.com</a>&gt; (<a href=https://www.apple.com/>Apple</a>)
+<li>Tanvi Vyas &lt;<a href=mailto:tanvi@mozilla.com>tanvi@mozilla.com</a>&gt; (<a href=https://www.mozilla.org/>Mozilla</a>)
+</ul>
+
+<p>There can be at most three Chairs.
+
+<p>No two Chairs can be from the same organization.
+
+<p>Except where otherwise specified, all decisions made by the Chairs
+are expected to be made <a href=#consensus>by consensus</a>. If
+consensus cannot be found among the Chairs, and unanimity is not
+otherwise required, the Chairs may make decisions by supermajority (at
+least 2/3rds support).
+
+<h3 id=chair-selection>Chair Selection</h3>
+
+<p>Within the above constraints, additional Chairs may be appointed by
+unanimous consent of the then-current Chairs.
+
+<p>If the number of Chairs becomes zero, or if five Community Group
+Participants—no two from the same organization—call for an election, the
+group must use the following process to elect a new Chair, consulting
+the Community Development Lead on election operations (e.g., voting
+infrastructure and using <a href=https://tools.ietf.org/html/rfc2777>RFC
+2777</a>):
+
+<ol>
+<li>Participants announce their candidacies. Participants have 14 days
+to announce their candidacies. No two candidates can be from the same
+organization. If there is only one candidate, that person becomes the
+Chair. If there are two or more candidates, there is a vote. (In the
+unlikely event that there are no candidates and the number of current
+Chairs is zero, Community Group Participants should ask the Community
+Development Lead for guidance on how to proceed.)
+<li>Participants vote. Multiple Participants from the same organization
+collectively share one vote. Participants have 21 days to vote for a
+single candidate. In case of a tie,
+<a href=https://tools.ietf.org/html/rfc2777>RFC 2777</a> is used to
+break the tie.
+</ol>
+
+<p>Participants dissatisfied with the outcome of an election may ask the
+Community Development Lead to intervene. The Community Development Lead,
+after evaluating the election, may take any action including no action.
+
+<p class=note>The Community Development Lead is a member of W3C staff
+chosen by W3C leadership to manage the Community Groups program. As of
+the drafting of this charter, the Community Development Lead was
+<a href=https://www.w3.org/People/functions/w3m#dom>Dominique
+Hazaël-Massieux</a>.
+
+<h2 id=deliverables>Deliverables</h2>
+
+<p>The <a href=#chairs>Chairs</a> may add Deliverables, but must not add
+Deliverables which lack the support of at least
+two <a href=#implementer>implementers</a>.
+
+<p>The Chairs may remove Deliverables.
+
+<p>This document will be updated to reflect the current set of
+Deliverables of the Community Group.
+
+<!--When we start adding Deliverables, we’ll remove this paragraph and
+the followng list, and replace them with the commented-out bits below.-->
+<p>There are no Deliverables of this Community Group at the present
+time. Potential future Deliverables include, but are not limited to, the
+following WICG work items:
+
+<ul>
+<li><a href=https://github.com/WICG/ad-click-attribution>Private Click Measurement</a>
+<li><a href=https://github.com/WICG/trust-token-api>Trust Token API</a>
+</ul>
+
+<!--
+<h3 id=specifications>Specifications</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Name
+      <th>Editors
+      <th>Destination (expected)
+    </tr>
+  </thead>
+  <tbody>
+    <tr id=placeholder-api>
+      <th><a href=scheme://host:port/path/to/spec>The Placeholder API</a>
+      <td>Place Holder and Place Holder
+      <td>HTML
+    </tr>
+    <tr id=placeholder-spec>
+      <th><a href=scheme://host:port/path/to/spec>Privacy-Preserving Placeholders</a>
+      <td>Place Holder and Place Holder
+      <td>WebAppSec
+    </tr>
+  </tbody>
+</table>
+
+<h3 id=reports>Non-normative reports</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Name
+      <th>Editors
+    </tr>
+  </thead>
+  <tbody>
+    <tr id=placeholder-report>
+      <th><a href=scheme://host:port/path/to/report>Thoughts on placeholders</a>
+      <td>Place Holder, Place Holder, and Place Holder
+    </tr>
+  </tbody>
+</table>
+-->
+
+<h2 id=coordination>Coordination</h2>
+
+<p>This group will collaborate with appropriate groups at
+<a href=https://www.w3.org/><abbr
+title="World Wide Web Consortium">W3C</abbr></a>,
+<a href=https://whatwg.org/><abbr
+title="Web Hypertext Application Technology Working Group">WHATWG</abbr></a>,
+<a href=https://www.ecma-international.org/>Ecma</a>,
+<a href=https://ietf.org/><abbr
+title="Internet Engineering Task Force">IETF</abbr></a>, and elsewhere,
+and will transition spec proposals to them when they’re ready for the
+standards track. Groups most likely to be close partners are listed
+below, but this group is expected to coordinate with other groups as
+relevant.
+
+<h3 id=w3c-coordination>W3C Groups</h3>
+
+<dl>
+<dt><a href=https://www.w3.org/Privacy/IG/>Privacy Interest Group (PING)</a>
+<dd>This group will coordinate with PING and will take into
+consideration outputs of PING when evaluating proposals.
+<dt><a href=https://www.w3.org/2011/webappsec/>Web Application Security
+Working Group (WebAppSec)</a>
+<dd>WebAppSec is expected to be the main destination for transitioning
+this group’s independent Deliverables to the standards track.
+<dt><a href=https://www.w3.org/community/wicg/>Web Platform Incubator
+Community Group (WICG)</a>
+<dd>WICG is expected to be a major source of Deliverables for this
+group.
+<p class=note>Only privacy-related WICG work items which have the
+support of at least two <a href=#implementer>implementers</a> are
+eligible for this group to take up as Deliverables.
+</dl>
+
+<h3 id=external-coordination>External Organizations</h3>
+
+<dl>
+<dt><a href=https://whatwg.org/>Web Hypertext Application Technology
+Working Group (WHATWG)</a>
+<dd>Much of this group’s work will likely result in pull requests on
+various WHATWG specs.
+</dl>
+
+<h2 id=process>Process</h2>
+
+<p>The group operates under the
+<a href=https://www.w3.org/community/about/agreements/>Community and
+Business Group Process</a>. This Charter is the sole operational
+agreement of the Community Group. Terms in this Charter that conflict
+with those of the Community and Business Group Process, the
+<a href=https://www.w3.org/community/about/agreements/cla/>Community
+Contributor License Agreement (CLA)</a>, or the
+<a href=https://www.w3.org/community/about/agreements/final/>Final
+Specification Agreement</a> are void.
+
+<p>All work and communication within this group is covered by the
+<a href=https://www.w3.org/Consortium/cepc/>W3C Code of Ethics and
+Professional Conduct</a>.
+
+<p>Contributions to Deliverables can only be made by Community Group
+Participants who have agreed to the
+<a href=https://www.w3.org/community/about/agreements/cla/>W3C Community
+Contributor License Agreement (CLA)</a>.
+
+<p class=note>This group’s <a href=#process>process</a>,
+asynchronous <a href=#work-mode>work mode</a>, and
+efficient <a href=#decisions>decision policy</a> are based on those of
+the WHATWG. These policies have been adapted to fit both the
+requirements of the
+<a href=https://www.w3.org/community/about/agreements/>Community and
+Business Group Process</a> and the particular needs of a group focused
+on privacy.
+
+<h3 id=editors>Editors</h3>
+
+<p>The Chairs appoint one or more Editors per Deliverable. Editors are
+responsible for the technical content of the Deliverable and have sole
+authority to modify the Deliverable (though their decisions may be
+overridden by the Chairs; see <a href=#decisions>below</a>).
+
+<p>Editors are responsible for
+<ul>
+<li>ensuring any applied changes fulfill the relevant criteria for
+changes.
+<li>resolving conflicts between contributors.
+<li>reducing open issues.
+<li>helping to manage the corresponding tests.
+<li>ensuring (together with implementers) implementations follow the
+standard and vice versa. (The “don’t write fiction” rule.)
+<li>ensuring contributions to their Deliverable are only made by
+Community Group Participants who have agreed to the
+<a href=https://www.w3.org/community/about/agreements/cla/>W3C Community
+Contributor License Agreement (CLA)</a>, and
+<li>ensuring that there are no unresolved substantive objections from
+Community Group Participants before merging contributions or otherwise
+modifying their Deliverable.
+</ul>
+
+<p>Changes of an editorial nature can be made, accepted, or rejected by
+editors without discussion.
+
+<p>Editors may solicit input from Community Group Participants, and may
+consider and respond to comments, suggestions, and objections from
+Participants and the public.
+
+<p>Editors may commit changes to their Deliverables without further
+review, provided they adhere to the requirements in this document.
+
+<h3 id=work-mode>Work Mode</h3>
+
+<p>The group will conduct all of its technical work in public. Community
+Group participants agree to make all contributions in the GitHub
+repository the group is using for the particular document. This might be
+in the form of a pull request, by raising an issue, or by adding a
+comment to an existing issue or pull request.
+
+<p>Any change that represents a feature addition must have the support
+of at least two <a href=#implementer>implementers</a>.
+
+<p>For any change that removes a feature, the feature being removed must
+either be not widely implemented, or must in the process of being
+removed from implementations.
+
+<h4 id=meetings>Meetings</h4>
+
+<p>The Community Group may hold teleconferences and face-to-face
+meetings. The Chairs will determine the schedule, logistics, and agenda
+of each, in consultation with Editors and Community Group Participants.
+Minutes from teleconference and face-to-face meetings will be archived
+for public review.
+
+<p class=note>Conclusions reached in meetings are tentative; see
+the <a href=#decisions>Decision Policy</a>.
+
+<h3 id=decisions>Decision Policy</h3>
+
+<p>Editors must respond to substantive issues raised on their
+Deliverable by Community Group Participants. Editors have discretion to
+resolve issues based on available information.
+
+<p>To afford asynchronous decisions and organizational deliberation, any
+conclusions reached in a face-to-face meeting or teleconference are
+tentative, and will be recorded in the relevant issues, pull requests,
+or repositories for consideration by Community Group Participants. Any
+Community Group Participant may object to a decision reached at a
+face-to-face meeting or teleconference within 14 days of publication of
+the decision provided that they include clear technical reasons for
+their objection. The Chairs and Editors will facilitate discussion to
+try to resolve the objection.
+
+<p>In case of a conflict among Community Group Participants, Editors are
+expected to go to significant lengths to resolve disagreements. In the
+end, they make a judgment call to pick the best option they believe will
+have <a href=#implementer>multi-implementer support</a>.
+
+<p>If a Community Group Participant is not satisfied with the resolution
+of an issue, they may request that the Editors revisit the issue. If not
+satisfied with the Editors’ final response, Community Group Participants
+may <a href=#appeals>appeal to the Chairs</a>.
+
+<p>If a Community Group Participant believes the Editors’ choice will
+not have <a href=#implementer>multi-implementer support</a>, and they
+cannot convince the Editors, then they may <a href=#appeals>appeal to
+the Chairs</a>. The Chairs may correct or uphold the decision based on
+their own understanding of support
+from <a href=#implementer>implementers</a>.
+
+<p>It is the Chairs’ responsibility to ensure that the decision process
+is fair and does not unreasonably favor or discriminate against any
+Community Group Participant or organization.
+
+<p>The Chairs may override Editors’ decisions, or remove Editors.
+
+<p>Implementations can always override the editors by implementing
+something else. Whenever that happens a breakdown in communication has
+taken place that the Community Group should seek to overcome and find
+ways to prevent it from happening again.
+
+<p>When implementations disagree, the Editors will try to find a
+solution that is privacy-preserving and mutually acceptable
+to <a href=#implementer>implementers</a>. If no such solution is
+identified, the Editors will research expectations of existing web
+content and specify the most privacy-preserving, web-compatible
+approach. If there isn’t enough existing web content affected by the
+change to make compatibility a concern, the Editors will, to the extent
+possible, be consistent with our goal to increase user privacy and align
+with <a href=#implementer>implementer</a> majority.
+
+<p>Implementation disagreement should not result in
+implementation-defined behavior or optional features.
+
+<p>Specifications should not make references to or rely on specific
+browser engine implementation details.
+
+<h4 id=appeals>Appeals</h4>
+
+<p>Community Group Participants may raise substantive issues for
+resolution by the Chairs.
+
+<p>To raise an issue on a Deliverable for review by the Editors and
+other Community Group Participants, a Community Group Participant must:
+
+<ol>
+<li>Identify the issue clearly (technical problem, interoperability
+issue, inconsistency with the
+<a href=https://w3ctag.github.io/ethical-web-principles/>W3C TAG Ethical
+Web Principles</a>, etc.) and recommend a solution;
+<li>Post the issue for review in the Deliverable’s repository; and
+<li>Endeavor to resolve the issue with the Editors or in concert with
+other Community Group Participants.
+</ol>
+
+<p>If the Community Group Participant finds those efforts
+unsatisfactory, they may:
+
+<ol>
+<li>Summarize the issue and the efforts to resolve it, and forward the
+summary and any supporting details to the Chairs, with a copy to the
+Community Group.
+<li>The Chairs may then invite the Editors and other Community Group
+Participants to comment, may request additional materials, schedule a
+meeting, or take other actions for its review.
+</ol>
+
+<p>The Chairs then make their determination at their sole discretion.
+
+<h2 id=patentpolicy>Patent Policy</h2>
+
+<p>As with other Community Groups, W3C seeks organizational licensing
+commitments under the
+<a href=https://www.w3.org/community/about/agreements/cla/> W3C
+Community Contributor License Agreement (CLA)</a>. When people request
+to participate without representing their organization’s legal
+interests, W3C will in general approve those requests for this group
+with the following understanding: W3C will seek and expect an
+organizational commitment under the CLA starting with the individual’s
+first request to make a contribution to a
+group <a href=#deliverables>Deliverable</a>.
+
+<h2 id=licensing>Licensing</h2>
+
+<p>Deliverables of this Community Group will use the
+<a href=http://www.w3.org/Consortium/Legal/2015/copyright-software-and-document>W3C
+Software and Document License</a>, unless the Editors expect the
+Deliverable to transition to a standards body which uses a different
+license. In such cases, the Editors may use the license of the target
+standards body.
+
+<p class=example title="Example: HTML Pull Request">A Deliverable
+expected to end up as a pull request on the
+<a href=https://html.spec.whatwg.org>HTML Living Standard</a> could be
+licensed under the
+<a href=https://creativecommons.org/licenses/by/4.0/>Creative Commons
+Attribution 4.0 International License</a>.
+
+<h2 id=amendments>Amendments to this Charter</h2>
+
+<p>This Charter may be amended at any time by unanimous consent of the
+Chairs. The Chairs will periodically update this Charter to reflect the
+addition and removal of Deliverables, Editors, and Chairs.
+
+<p class=note>Per the
+<a href=https://www.w3.org/community/about/agreements/>Community and
+Business Group Process</a>, the Chairs must notify Community Group
+Participants of any material changes to the Charter.
+
+<h2 id=glossary>Glossary</h2>
+
+<dl>
+  <dt id=consensus>consensus
+  <dd>
+    <p>This Community Group uses the WHATWG
+    <a href=https://whatwg.org/sg-agreement#consensus>definition of
+    consensus</a>: “the parties concur. Consensus may be established
+    tacitly. By way of example, so long as (1) proposed actions are
+    clear and visible, (2) participants have opportunities to voice
+    concerns, and (3) there is no sustained, substantive opposition,
+    then Consensus may be established simply by moving forward on the
+    proposal or a course of action; this is anticipated to be the norm
+    for most matters.”
+  <dt id=implementer>implementer
+  <dd>
+    <p>The WHATWG
+    <a href=https://whatwg.org/sg-agreement#qualifying-entity>defines
+    implementer</a> as "an entity that develops one of the core
+    end-to-end integrated web browser platform engines and distributes
+    its integrated implementations widely." This definition is useful
+    for determining multi-implementer support of core web platform
+    features, features which are typically and reasonably implemented
+    within the core end-to-end integrated web browser platform engines,
+    and this Community Group relies on this definition for such
+    features.
+    <p>Some privacy-related features ship in browsers but are not
+    implemented within browser engines. In cases where multiple entities
+    share a browser engine in common, they only count as multiple
+    implementers of a feature if that feature’s implementations are
+    separate and are not believed to be specific to the internals of the
+    engine.
+    <p class=example title="Example: two browsers, separate engines">The
+    Peach Foundation ships Walkabout, a web browser built on the
+    MeshTools browser engine. Nanoware also ships a web browser, Vertex,
+    built on the Shrug browser engine. If a feature has the support in
+    both MeshTools and Shrug, as shipping (or as is expected to ship) in
+    Walkabout and Vertex, it can be said to have multi-implementer
+    support.
+    <p class=example title="Example: two browsers, shared engine, shared
+    implementation">Valiant Inc. ships Valiant, a web browser built on
+    the Shrug browser engine. The Avogadro Corporation ships a web
+    browser, Veneer, also built on the Shrug browser engine. A feature
+    implemented in Shrug counts as having one implementer supporting it,
+    even if that feature ships in both Valiant and Veneer.
+    <p class=example title="Example: two browsers, shared engine,
+    separate implementations (existing)">Valiant and Vertex both ship a
+    feature, but it is not a feature with a shared, underlying
+    implementation in the Shrug engine. Such a feature counts as having
+    two implementers supporting it, even though Valiant and Vertex are
+    both built on Shrug, because this particular feature has seperate,
+    non-shared implementations.
+    <p class=example title="Example: two browsers, shared engine,
+    separate implementations (expected)">Valiant and Vertex (who, again,
+    share an engine) both express implementer interest in a feature that
+    does not yet have any implementations. If both implementers indicate
+    that they do not expect to share an implementation (they do not
+    expect to land their implementations in Shrug), the feature counts
+    as having two implementers supporting it. If both implementers
+    expect they’d share an implementation in Shrug, it counts as having
+    one implementer supporting it.
+  </dd>
+</dl>
+
+<h2 id=about>About this Charter</h2>
+
+<ul>
+<li>This Version: <a href=https://privacycg.github.io/charter.html>https://privacycg.github.io/charter.html</a>
+<li>Latest Version: <a href=https://privacycg.github.io/charter.html>https://privacycg.github.io/charter.html</a>
+<li>Version History: <a href=https://github.com/privacycg/admin/commits>https://github.com/privacycg/admin/commits</a>
+<li>Previous Versions: None.
+</ul>
+
+<footer>
+<small>Portions of this charter were based on, derived from, or
+inspired by six documents. Text from the
+<a href=https://w3c.github.io/cg-charter/CGCharter.html>Community and
+Business Group charter template</a>, the
+<a href=https://webassembly.github.io/cg-charter/>Web Assembly Community
+Group Charter</a>, and the
+<a href=https://wicg.github.io/admin/charter.html>Web Incubator
+Community Group Charter</a>
+is <a href="http://www.w3.org/Consortium/Legal/ipr-notice">copyright</a>
+© 2015, 2016, 2017, 2018, 2019 <a href="http://www.w3.org/">World Wide
+Web Consortium</a>, (<a href="http://www.lcs.mit.edu/">Massachusetts
+Institute of Technology</a>, <a href="http://www.ercim.org/">European
+Research Consortium for Informatics and
+Mathematics</a>, <a href="http://www.keio.ac.jp/">Keio
+University</a>, <a href="http://ev.buaa.edu.cn/">Beihang</a>). Those
+three works are distributed under the
+<a href=https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document>W3C®
+Software and Document License</a>. Text from the
+<a href=https://whatwg.org/>WHATWG</a>’s
+<a href=https://whatwg.org/sg-agreement>Steering Group Agreement</a>,
+<a href=https://whatwg.org/workstream-policy>Workstream Policy</a>, and
+<a href=https://whatwg.org/working-mode>Working Mode</a> is copyright ©
+2018 WHATWG (Apple, Google, Mozilla, Microsoft). Those three works are
+licensed under
+a <a href="https://creativecommons.org/licenses/by/4.0/">Creative
+Commons Attribution 4.0 International License</a>.</small>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  document.querySelectorAll("[id]").forEach(function(heading) {
+    let permalink = document.createElement("a");
+    permalink.href = "#" + heading.getAttribute("id");
+    permalink.className = "permalink";
+    permalink.appendChild(document.createTextNode("#"));
+    if (heading.localName == "tr") {
+      heading = heading.children[0];
+    }
+    heading.appendChild(document.createTextNode(" "));
+    heading.appendChild(permalink);
+  });
+});
+</script>
