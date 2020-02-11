@@ -93,19 +93,21 @@
 <h2 id=mission>Mission</h2>
 
 <p>The mission of the <a href=https://privacycg.github.io/>Privacy
-Community Group</a> is to incubate privacy-focused web standards and APIs
-to improve user privacy on the web through enhanced browser behavior.
+Community Group</a>, motivated by the
+<a href=https://www.w3.org/2001/tag/doc/ethical-web-principles/>W3C TAG
+Ethical Web Principles</a>, is to incubate privacy-focused web features
+and APIs to improve user privacy on the web through enhanced browser
+behavior.
 
 <p>The group welcomes participation from browser vendors, privacy
 advocates, web application developers, and other interested parties.
 
 <h2 id=scope>Scope</h2>
 
-<p>The Community Group will discuss proposals for new privacy-focused
-web platform features intended to be implemented in browsers or similar
-user agents. The group will also discuss potential modifications of
-existing web platform features aimed at improving user privacy on the
-web.
+<p>The Community Group will discuss ideas for new privacy-focused web
+platform features intended to be implemented in browsers or similar user
+agents. The group will also discuss potential modifications of existing
+web platform features aimed at improving user privacy on the web.
 
 <h3 id=out-of-scope>Out of Scope</h3>
 
@@ -123,7 +125,7 @@ responsibility of the
 
 <h2 id=chairs>Chairs</h2>
 
-<p>The Chairs of the Privacy Community Group are:
+<p>The <dfn>Chairs</dfn> of the Privacy Community Group are:
 
 <ul>
 <li>Erik Anderson &lt;<a href=mailto:erik.anderson@microsoft.com>erik.anderson@microsoft.com</a>&gt; (<a href=https://www.microsoft.com/>Microsoft</a>)
@@ -131,7 +133,30 @@ responsibility of the
 <li>Tanvi Vyas &lt;<a href=mailto:tanvi@mozilla.com>tanvi@mozilla.com</a>&gt; (<a href=https://www.mozilla.org/>Mozilla</a>)
 </ul>
 
-<p>There can be at most three Chairs.
+<p>The Chairs are responsible for the day-to-day running of the group,
+including:
+
+<ul>
+<li>encouraging participation in the group,
+<li>managing the group's GitHub organization and repositories, website,
+  and online presence,
+<li>ensuring the group adheres to its <a href=#process>Process</a>,
+<li>judging proposals as in or <a href=out-of-scope>out</a>
+of <a href=scope>scope</a>,
+<li>focusing the group's limited time on the Proposals and Work Items
+most likely to positively impact privacy on the web via wide
+implementation and adoption,
+<li>moderating the group's discussions, whatever the forum (GitHub,
+mailing lists, face to face, etc.),
+<li>running teleconferences and
+face-to-face <a href=#meetings>meetings</a>,
+<li>and keeping this Charter compliant with the
+<a href=https://www.w3.org/community/about/agreements/>Community and
+Business Group Process</a>, updating it as necessary.
+</ul>
+
+<p>The Chairs have a number of other powers and responsibilities which
+are defined throughout this document.
 
 <p>No two Chairs can be from the same organization.
 
@@ -140,6 +165,16 @@ are expected to be made <a href=#consensus>by consensus</a>. If
 consensus cannot be found among the Chairs, and unanimity is not
 otherwise required, the Chairs may make decisions by supermajority (at
 least 2/3rds support).
+
+<h3 id=notices>Announcements</h3>
+
+<p>When the Chairs are required to <dfn>notify the group</dfn> of
+something, they will raise an issue in the
+<a href=https://github.com/privacycg/admin><code>privacycg/admin</code></a>
+repository labeled
+<a href=https://github.com/privacycg/admin/issues?q=is%3Aissue+is%3Aopen+label%3Aannouncement><code>announcement</code></a>,
+and will ensure the topic is covered at the
+next <a href=#meetings>meeting</a>.
 
 <h3 id=chair-selection>Chair Selection</h3>
 
@@ -178,24 +213,57 @@ the drafting of this charter, the Community Development Lead was
 <a href=https://www.w3.org/People/functions/w3m#dom>Dominique
 Hazaël-Massieux</a>.
 
-<h2 id=deliverables>Deliverables</h2>
+<h2 id=proposals>Proposals</h2>
 
-<p>The <a href=#chairs>Chairs</a> may add Deliverables, but must not add
-Deliverables which lack the support of at least
-two <a href=#implementer>implementers</a>.
+<p>A <dfn>Proposal</dfn> is an idea brought to the Community Group for
+consideration and potential adoption as a <a href=#work-items>Work
+Item</a>.
 
-<p>The Chairs may remove Deliverables.
+<p>Any Community Group Participant may make a Proposal by filing
+<a href=https://github.com/privacycg/proposals/issues>an issue</a> in
+the
+<a href=https://github.com/privacycg/proposals><code>privacycg/proposals</code></a>
+repository on GitHub, stating the problem they would like to address and
+how they propose to address it.
 
-<p>This document will be updated to reflect the current set of
-Deliverables of the Community Group.
+<p>The Community Group may discuss the Proposal on GitHub and during
+teleconferences or face-to-face <a href=#meetings>meetings</a>.
 
-<h3 id=specifications>Specifications</h3>
+<p>The <a href=#chairs>Chairs</a> may create a dedicated repository for
+a Proposal. They may do this for any reason, such as but not limited to:
+
+<ul>
+<li>because the Proposal has become sufficiently complex that writing an
+explainer is warranted
+<li>because the Proposal is sufficiently complex that having a dedicated
+issue tracker for it is warranted
+<li>because multiple <a href=#implementer>implementers</a> have
+expressed interest in the Proposal
+</ul>
+
+<p>Proposals may be withdrawn by their originators, or may be closed by
+the Chairs (if, for example, the Chairs deem the Proposal to
+be <a href=out-of-scope>out of scope</a> or the Proposal fails to gain
+sufficient <a href=#implementer>implementer</a> support to be adopted as
+a Work Item). If such a Proposal has a dedicated repository, the Chairs
+should take steps to ensure the data is not lost, perhaps by transfering
+the repository to a different organization or user, or by archiving it.
+
+<h2 id=work-items>Work Items</h2>
+
+<p>A <dfn>Work Item</dfn> is a Proposal that has been formally adopted
+as something the Community Group will work on. Every Work Item has one
+or more <a href=#editors>Editors</a>, who are appointed by
+the <a href=#chairs>Chairs</a>.
+
+<p>The current set of Work Items of the Community Group are:
+
 <table>
   <thead>
     <tr>
       <th>Name
       <th>Editors
-      <th>Destination (expected)
+      <th>Expected Destination
     </tr>
   </thead>
   <tbody>
@@ -207,24 +275,37 @@ Deliverables of the Community Group.
   </tbody>
 </table>
 
-<h3 id=other-work>Other work</h3>
-<p>None.
-<!--
-<table>
-  <thead>
-    <tr>
-      <th>Name
-      <th>Editors
-    </tr>
-  </thead>
-  <tbody>
-    <tr id=placeholder-report>
-      <th><a href=scheme://host:port/path/to/report>Thoughts on placeholders</a>
-      <td>Place Holder, Place Holder, and Place Holder
-    </tr>
-  </tbody>
-</table>
--->
+<p>This list will be kept <a href=#amendments>updated</a> by the Chairs
+to reflect the current set of Work Items of the Community Group.
+
+<p>The Chairs may add Work Items, but must not add Work Items which lack
+the support of at least two <a href=#implementer>implementers</a>.
+
+<p class=note>Typically, Work Items begin life as a Proposal before
+being adopted.
+
+<p>When a Work Item's Editors deem the Work Item ready for migration to
+a standards body, they will notify the Chairs. The Editors and Chairs
+will then work together to identify the best destination, and will work
+with the destination standards body to successfully migrate the work.
+
+<p>The Chairs may remove Work Items. The Chairs
+must <a href=#notices>notify the group</a> of the removal of Work Items,
+and this notice must include rationale. Some possible reasons for
+removing a Work Item are:
+
+<ul>
+<li>because the Work Item has been migrated elsewhere
+<li>because the Work Item no longer has the support of
+multiple <a href=#implementer>implementers</a> and is unlikely to regain
+it
+<li>because the Work Item no longer has an <a href=#editors>Editor</a>
+and a replacement cannot be found
+</ul>
+
+<p>The Chairs should take steps to ensure the repositories of removed
+Work Items are not lost, perhaps by transferring the repository to a
+different organization or user, or by archiving it.
 
 <h2 id=coordination>Coordination</h2>
 
@@ -236,28 +317,33 @@ title="Web Hypertext Application Technology Working Group">WHATWG</abbr></a>,
 <a href=https://www.ecma-international.org/>Ecma</a>,
 <a href=https://ietf.org/><abbr
 title="Internet Engineering Task Force">IETF</abbr></a>, and elsewhere,
-and will transition spec proposals to them when they’re ready for the
-standards track. Groups most likely to be close partners are listed
-below, but this group is expected to coordinate with other groups as
-relevant.
+and will migrate <a href=#work-items>Work Items</a> to them when they’re
+ready for the standards track. Groups most likely to be close partners
+are listed below, but this group is expected to coordinate with other
+groups as relevant.
 
 <h3 id=w3c-coordination>W3C Groups</h3>
 
 <dl>
-<dt><a href=https://www.w3.org/Privacy/IG/>Privacy Interest Group (PING)</a>
+<dt><a href=https://www.w3.org/Privacy/IG/>Privacy Interest Group
+(PING)</a>
 <dd>This group will coordinate with PING and will take into
-consideration outputs of PING when evaluating proposals.
+consideration outputs of PING when
+evaluating <a href=#proposals>Proposals</a> and <a href=#work-items>Work
+Items</a>.
+
 <dt><a href=https://www.w3.org/2011/webappsec/>Web Application Security
 Working Group (WebAppSec)</a>
-<dd>WebAppSec is expected to be the main destination for transitioning
-this group’s independent Deliverables to the standards track.
+<dd>WebAppSec is expected to be a destination for transitioning CG Work
+Items to the standards track.
+
 <dt><a href=https://www.w3.org/community/wicg/>Web Platform Incubator
 Community Group (WICG)</a>
-<dd>WICG is expected to be a major source of Deliverables for this
+<dd>WICG is expected to be a major source of Work Items for this
 group.
-<p class=note>Only privacy-related WICG work items which have the
-support of at least two <a href=#implementer>implementers</a> are
-eligible for this group to take up as Deliverables.
+<p class=note>Only privacy-related WICG proposals which have the support
+of at least two <a href=#implementer>implementers</a> are eligible for
+this group to take up as Work Items.
 </dl>
 
 <h3 id=external-coordination>External Organizations</h3>
@@ -285,8 +371,9 @@ Specification Agreement</a> are void.
 <a href=https://www.w3.org/Consortium/cepc/>W3C Code of Ethics and
 Professional Conduct</a>.
 
-<p>Contributions to Deliverables can only be made by Community Group
-Participants who have agreed to the
+<p>Contributions to <a href=#proposals>Proposals</a>
+and <a href=#work-items>Work Items</a> can only be made by Community
+Group Participants who have agreed to the
 <a href=https://www.w3.org/community/about/agreements/cla/>W3C Community
 Contributor License Agreement (CLA)</a>.
 
@@ -301,10 +388,10 @@ on privacy.
 
 <h3 id=editors>Editors</h3>
 
-<p>The Chairs appoint one or more Editors per Deliverable. Editors are
-responsible for the technical content of the Deliverable and have sole
-authority to modify the Deliverable (though their decisions may be
-overridden by the Chairs; see <a href=#decisions>below</a>).
+<p><dfn>Editors</dfn> are responsible for the technical content of
+their <a href=#work-items>Work Item</a> and have sole authority to
+modify the Work Item (though their decisions may be overridden by the
+<a href=#chairs>Chairs</a>; see <a href=#decisions>below</a>).
 
 <p>Editors are responsible for
 <ul>
@@ -314,14 +401,14 @@ changes.
 <li>reducing open issues.
 <li>helping to manage the corresponding tests.
 <li>ensuring (together with implementers) implementations follow the
-standard and vice versa. (The “don’t write fiction” rule.)
-<li>ensuring contributions to their Deliverable are only made by
+requirements and vice versa. (The “don’t write fiction” rule.)
+<li>ensuring contributions to their Work Item are only made by
 Community Group Participants who have agreed to the
 <a href=https://www.w3.org/community/about/agreements/cla/>W3C Community
 Contributor License Agreement (CLA)</a>, and
 <li>ensuring that there are no unresolved substantive objections from
 Community Group Participants before merging contributions or otherwise
-modifying their Deliverable.
+modifying their Work Item.
 </ul>
 
 <p>Changes of an editorial nature can be made, accepted, or rejected by
@@ -331,7 +418,7 @@ editors without discussion.
 consider and respond to comments, suggestions, and objections from
 Participants and the public.
 
-<p>Editors may commit changes to their Deliverables without further
+<p>Editors may commit changes to their Work Items without further
 review, provided they adhere to the requirements in this document.
 
 <h3 id=work-mode>Work Mode</h3>
@@ -352,19 +439,22 @@ removed from implementations.
 <h4 id=meetings>Meetings</h4>
 
 <p>The Community Group may hold teleconferences and face-to-face
-meetings. The Chairs will determine the schedule, logistics, and agenda
-of each, in consultation with Editors and Community Group Participants.
-Minutes from teleconference and face-to-face meetings will be archived
-for public review.
+meetings. The <a href=#chairs>Chairs</a> will determine the schedule,
+logistics, and agenda of each, in consultation
+with <a href=#editors>Editors</a> and Community Group Participants.
+Minutes from teleconference and face-to-face meetings will be
+<a href=https://github.com/privacycg/meetings>archived</a> for public
+review.
 
 <p class=note>Conclusions reached in meetings are tentative; see
 the <a href=#decisions>Decision Policy</a>.
 
 <h3 id=decisions>Decision Policy</h3>
 
-<p>Editors must respond to substantive issues raised on their
-Deliverable by Community Group Participants. Editors have discretion to
-resolve issues based on available information.
+<p><a href=#editors>Editors</a> must respond to substantive issues
+raised on their <a href=#work-items>Work Item</a> by Community Group
+Participants. Editors have discretion to resolve issues based on
+available information.
 
 <p>To afford asynchronous decisions and organizational deliberation, any
 conclusions reached in a face-to-face meeting or teleconference are
@@ -373,8 +463,8 @@ or repositories for consideration by Community Group Participants. Any
 Community Group Participant may object to a decision reached at a
 face-to-face meeting or teleconference within 14 days of publication of
 the decision provided that they include clear technical reasons for
-their objection. The Chairs and Editors will facilitate discussion to
-try to resolve the objection.
+their objection. The <a href=#chairs>Chairs</a> and Editors will
+facilitate discussion to try to resolve the objection.
 
 <p>In case of a conflict among Community Group Participants, Editors are
 expected to go to significant lengths to resolve disagreements. In the
@@ -414,26 +504,24 @@ change to make compatibility a concern, the Editors will, to the extent
 possible, be consistent with our goal to increase user privacy and align
 with <a href=#implementer>implementer</a> majority.
 
-<p>Implementation disagreement should not result in
-implementation-defined behavior or optional features.
-
-<p>Specifications should not make references to or rely on specific
-browser engine implementation details.
+<p>Work Items should not make references to or rely on specific browser
+engine implementation details.
 
 <h4 id=appeals>Appeals</h4>
 
 <p>Community Group Participants may raise substantive issues for
-resolution by the Chairs.
+resolution by the <a href=#chairs>Chairs</a>.
 
-<p>To raise an issue on a Deliverable for review by the Editors and
-other Community Group Participants, a Community Group Participant must:
+<p>To raise an issue on a <a href=#work-items>Work Item</a> for review
+by the <a href=#editors>Editors</a> and other Community Group
+Participants, a Community Group Participant must:
 
 <ol>
 <li>Identify the issue clearly (technical problem, interoperability
 issue, inconsistency with the
-<a href=https://w3ctag.github.io/ethical-web-principles/>W3C TAG Ethical
-Web Principles</a>, etc.) and recommend a solution;
-<li>Post the issue for review in the Deliverable’s repository; and
+<a href=https://www.w3.org/2001/tag/doc/ethical-web-principles/>W3C
+TAG Ethical Web Principles</a>, etc.) and recommend a solution;
+<li>Post the issue for review in the Work Item’s repository; and
 <li>Endeavor to resolve the issue with the Editors or in concert with
 other Community Group Participants.
 </ol>
@@ -463,18 +551,19 @@ interests, W3C will in general approve those requests for this group
 with the following understanding: W3C will seek and expect an
 organizational commitment under the CLA starting with the individual’s
 first request to make a contribution to a
-group <a href=#deliverables>Deliverable</a>.
+group <a href=#work-items>Work Item</a>.
 
 <h2 id=licensing>Licensing</h2>
 
-<p>Deliverables of this Community Group will use the
+<p>Work Items of this Community Group will use the
 <a href=http://www.w3.org/Consortium/Legal/2015/copyright-software-and-document>W3C
-Software and Document License</a>, unless the Editors expect the
-Deliverable to transition to a standards body which uses a different
+Software and Document License</a>, unless
+the <a href=#editors>Editors</a> expect the <a href=#work-items>Work
+Item</a> to transition to a standards body which uses a different
 license. In such cases, the Editors may use the license of the target
 standards body.
 
-<p class=example title="Example: HTML Pull Request">A Deliverable
+<p class=example title="Example: HTML Pull Request">A Work Item
 expected to end up as a pull request on the
 <a href=https://html.spec.whatwg.org>HTML Living Standard</a> could be
 licensed under the
@@ -484,13 +573,14 @@ Attribution 4.0 International License</a>.
 <h2 id=amendments>Amendments to this Charter</h2>
 
 <p>This Charter may be amended at any time by unanimous consent of the
-Chairs. The Chairs will periodically update this Charter to reflect the
-addition and removal of Deliverables, Editors, and Chairs.
+<a href=#chairs>Chairs</a>. The Chairs will periodically update this
+Charter to reflect the addition and removal of <a href=#work-items>Work
+Items</a>, <a href=#editors>Editors</a>, and Chairs.
 
 <p class=note>Per the
 <a href=https://www.w3.org/community/about/agreements/>Community and
-Business Group Process</a>, the Chairs must notify Community Group
-Participants of any material changes to the Charter.
+Business Group Process</a>, the Chairs must <a href=#notices>notify the
+group</a> of any material changes to the Charter.
 
 <h2 id=glossary>Glossary</h2>
 
