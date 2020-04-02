@@ -245,6 +245,16 @@ issue tracker for it is warranted
 expressed interest in the Proposal
 </ul>
 
+<p>Proposals begin as or evolve into
+<a href=https://w3ctag.github.io/explainers>explainers</a> which
+describe the proposed changes to the web platform, and which may serve
+as the basis for a Work Item (should the Proposal be adopted as one).
+
+<p class=note>While explainers are Community Group Reports as defined in
+the <a href=https://www.w3.org/community/about/agreements/>Community and
+Business Group Process</a>, they are not Specifications as defined in
+that document.
+
 <p>Proposals may be withdrawn by their originators, or may be closed by
 the Chairs (if, for example, the Chairs deem the Proposal to
 be <a href=out-of-scope>out of scope</a> or the Proposal fails to gain
@@ -255,14 +265,14 @@ the repository to a different organization or user, or by archiving it.
 
 <h2 id=work-items>Work Items</h2>
 
-<p>A <dfn>Work Item</dfn> is a Proposal that has been formally adopted
-as something the Community Group will work on.  The purpose of adopting
-a Work Item is to develop a specification&mdash;or modifications to
-other specifications&mdash;that enables interoperability between
-different implementations.
-
-<p>Every Work Item has one or more <a href=#editors>Editors</a>, who are
-appointed by the <a href=#chairs>Chairs</a>.
+<p>The Community Group may produce <dfn>Work Items</dfn>—Specifications
+as defined in the
+<a href=https://www.w3.org/community/about/agreements/>Community and
+Business Group Process</a>—a special kind of Community Group Report
+whose purpose is to enable interoperability between independent
+implementations of the features it defines. Each Work Item has one
+or more <a href=#editors>Editors</a>, who are appointed by
+the <a href=#chairs>Chairs</a>.
 
 <p>The current set of Work Items of the Community Group are:
 
@@ -289,13 +299,23 @@ to reflect the current set of Work Items of the Community Group.
 <p>The Chairs may add Work Items, but must not add Work Items which lack
 the support of at least two <a href=#implementer>implementers</a>.
 
-<p class=note>Typically, Work Items begin life as a Proposal before
-being adopted.
+<p>Each Work Item should be accompanied by an explainer describing its
+proposed changes to the web platform. Editors should keep the Work
+Item's explainer up-to-date with the Work Item as it evolves.
 
-<p>When a Work Item's Editors deem the Work Item ready for migration to
-a standards body, they will notify the Chairs. The Editors and Chairs
-will then work together to identify the best destination, and will work
-with the destination standards body to successfully migrate the work.
+<p class=note>Since Work Items typically begin life as a Proposal before
+being formally adopted, they usually start out with an explainer.
+
+<p>When a Work Item's Editors deem the Work Item ready for migration,
+they will notify the Chairs. The CG may produce a Final Community Group
+Report at this time. The Editors and Chairs will identify the best
+destination standards body or bodies, and will then work with those
+bodies to successfully migrate the Work Item.
+
+<p class=note>When migrated to the standards track, Work Items might
+become standalone specifications, they might be integrated into one or
+more existing specifications, or they might result in a combination of
+these options.
 
 <p>The Chairs may remove Work Items. The Chairs
 must <a href=#notices>notify the group</a> of the removal of Work Items,
@@ -444,12 +464,13 @@ for reporting security or privacy issues are
 <a href=https://github.com/privacycg/.github/blob/master/SECURITY.md>posted
 on GitHub</a> and kept up-to-date.
 
-<p>Any change that represents a feature addition must have the support
-of at least two <a href=#implementer>implementers</a>.
+<p>Any change to a <a href=#work-items>Work Item</a> that represents a
+feature addition must have the support of at least
+two <a href=#implementer>implementers</a>.
 
-<p>For any change that removes a feature, the feature being removed must
-either be not widely implemented, or must be in the process of being
-removed from implementations.
+<p>For any change that removes a feature from a Work Item, the feature
+being removed must either be not widely implemented, or must be in the
+process of being removed from implementations.
 
 <h4 id=meetings>Meetings</h4>
 
