@@ -258,7 +258,7 @@ that document.
 <p>Proposals may be withdrawn by their originators, or may be closed by
 the Chairs (if, for example, the Chairs deem the Proposal to
 be <a href=out-of-scope>out of scope</a> or the Proposal fails to gain
-sufficient <a href=#implementer>implementer</a> support to be adopted as
+sufficient <a href=#implementer>implementer</a> interest to be adopted as
 a Work Item). If such a Proposal has a dedicated repository, the Chairs
 should take steps to ensure the data is not lost, perhaps by transferring
 the repository to a different organization or user, or by archiving it.
@@ -297,7 +297,7 @@ the <a href=#chairs>Chairs</a>.
 to reflect the current set of Work Items of the Community Group.
 
 <p>The Chairs may add Work Items, but must not add Work Items which lack
-the support of at least two <a href=#implementer>implementers</a>.
+interest from at least two <a href=#implementer>implementers</a>.
 
 <p>Each Work Item should be accompanied by an explainer describing its
 proposed changes to the web platform. Editors should keep the Work
@@ -324,9 +324,9 @@ removing a Work Item are:
 
 <ul>
 <li>because the Work Item has been migrated elsewhere
-<li>because the Work Item no longer has the support of
-multiple <a href=#implementer>implementers</a> and is unlikely to regain
-it
+<li>because the Work Item no longer has
+multiple <a href=#implementer>implementers</a> interested in it and is
+unlikely to regain such interest
 <li>because the Work Item no longer has an <a href=#editors>Editor</a>
 and a replacement cannot be found
 </ul>
@@ -369,9 +369,9 @@ Items to the standards track.
 Community Group (WICG)</a>
 <dd>WICG is expected to be a major source of Work Items for this
 group.
-<p class=note>Only privacy-related WICG proposals which have the support
-of at least two <a href=#implementer>implementers</a> are eligible for
-this group to take up as Work Items.
+<p class=note>Only privacy-related WICG proposals for which at least
+two <a href=#implementer>implementers</a> have expressed interest are
+eligible for this group to take up as Work Items.
 </dl>
 
 <h3 id=external-coordination>External Organizations</h3>
@@ -465,7 +465,7 @@ for reporting security or privacy issues are
 on GitHub</a> and kept up-to-date.
 
 <p>Any change to a <a href=#work-items>Work Item</a> that represents a
-feature addition must have the support of at least
+feature addition must have interest expressed from at least
 two <a href=#implementer>implementers</a>.
 
 <p>For any change that removes a feature from a Work Item, the feature
@@ -505,7 +505,7 @@ facilitate discussion to try to resolve the objection.
 <p>In case of a conflict among Community Group Participants, Editors are
 expected to go to significant lengths to resolve disagreements. In the
 end, they make a judgment call to pick the best option they believe will
-have <a href=#implementer>multi-implementer support</a>.
+have the most interest from <a href=#implementer>implementers</a>.
 
 <p>If a Community Group Participant is not satisfied with the resolution
 of an issue, they may request that the Editors revisit the issue. If not
@@ -513,10 +513,10 @@ satisfied with the Editors’ final response, Community Group Participants
 may <a href=#appeals>appeal to the Chairs</a>.
 
 <p>If a Community Group Participant believes the Editors’ choice will
-not have <a href=#implementer>multi-implementer support</a>, and they
+not have <a href=#implementer>multi-implementer interest</a>, and they
 cannot convince the Editors, then they may <a href=#appeals>appeal to
 the Chairs</a>. The Chairs may correct or uphold the decision based on
-their own understanding of support
+their own understanding of interest
 from <a href=#implementer>implementers</a>.
 
 <p>It is the Chairs’ responsibility to ensure that the decision process
@@ -639,7 +639,7 @@ group</a> of any material changes to the Charter.
     implementer</a> as "an entity that develops one of the core
     end-to-end integrated web browser platform engines and distributes
     its integrated implementations widely." This definition is useful
-    for determining multi-implementer support of core web platform
+    for determining multi-implementer interest of core web platform
     features, features which are typically and reasonably implemented
     within the core end-to-end integrated web browser platform engines,
     and this Community Group relies on this definition for such
@@ -653,16 +653,20 @@ group</a> of any material changes to the Charter.
     <p class=example title="Example: two browsers, separate engines">The
     Peach Foundation ships Walkabout, a web browser built on the
     MeshTools browser engine. Nanoware also ships a web browser, Vertex,
-    built on the Shrug browser engine. If a feature has the support in
-    both MeshTools and Shrug, as shipping (or as is expected to ship) in
-    Walkabout and Vertex, it can be said to have multi-implementer
-    support.
+    built on the Shrug browser engine. If a feature is supported in both
+    MeshTools and Shrug it can be said to have multi-implementer support.
+    If MeshTools and Shrug engineers both express interest in a
+    proposal, it can be said to have multi-implementer interest.
     <p class=example title="Example: two browsers, shared engine, shared
     implementation">Valiant Inc. ships Valiant, a web browser built on
     the Shrug browser engine. The Avogadro Corporation ships a web
     browser, Veneer, also built on the Shrug browser engine. A feature
     implemented in Shrug counts as having one implementer supporting it,
-    even if that feature ships in both Valiant and Veneer.
+    even if that feature ships in both Valiant and Veneer. If Shrug
+    engineers express interest in a proposal and expect that, were they
+    to implement the proposal, the implementation would live in Shrug,
+    that counts as interest from one implementer, even if the Shrug
+    engineers work for different organizations.
     <p class=example title="Example: two browsers, shared engine,
     separate implementations (existing)">Valiant and Vertex both ship a
     feature, but it is not a feature with a shared, underlying
@@ -676,9 +680,9 @@ group</a> of any material changes to the Charter.
     does not yet have any implementations. If both implementers indicate
     that they do not expect to share an implementation (they do not
     expect to land their implementations in Shrug), the feature counts
-    as having two implementers supporting it. If both implementers
+    as having two implementers interested in it. (If both implementers
     expect they’d share an implementation in Shrug, it counts as having
-    one implementer supporting it.
+    one implementer interested in it.)
   </dd>
 </dl>
 
