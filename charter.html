@@ -690,31 +690,29 @@ Commons Attribution 4.0 International License</a>.</small>
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-  const headingElements = ["h1", "h2", "h3", "h4", "h5", "h6"];
   let sectionCounters = [NaN, 0, 0, 0, 0, 0, 0];
   document.querySelectorAll("[id]").forEach(function(heading) {
-    const permalink = document.createElement("a");
-    permalink.href = "#" + heading.getAttribute("id");
-    permalink.className = "permalink";
-    let prefix = "";
-    if (headingElements.includes(heading.localName)) {
+    let sectionNumber = "";
+    if (heading instanceof HTMLHeadingElement) {
       const headingLevel = parseInt(heading.localName.substring(1), 10);
-      console.log("saw an " + heading.localName + "headingLevel " + headingLevel);
       sectionCounters[headingLevel]++;
       for (let i = headingLevel+1; i < 7; i++) {
         sectionCounters[i] = 0;
       }
-      let sectionNumber = sectionCounters.slice(2).join(".");
-      while (sectionNumber.endsWith(".0")) {
-        sectionNumber = sectionNumber.slice(0, -2);
+      sectionNumber = sectionCounters.slice(2);
+      while (sectionNumber[sectionNumber.length-1] == 0) {
+        sectionNumber.pop();
       }
-      prefix = sectionNumber + ".";
+      sectionNumber = sectionNumber.join(".") + ".";
     }
-    permalink.appendChild(document.createTextNode(prefix));
-    if (heading.localName == "tr") {
+    const permalink = document.createElement("a");
+    permalink.href = "#" + heading.getAttribute("id");
+    permalink.className = "permalink";
+    permalink.appendChild(document.createTextNode(sectionNumber));
+    if (heading instanceof HTMLTableRowElement) {
       heading = heading.children[0]; // the `th` row heading
     }
-    if (heading.firstChild.localName == "a") {
+    if (heading.firstChild instanceof HTMLAnchorElement) {
       permalink.appendChild(document.createTextNode("#"));
       heading.appendChild(document.createTextNode(" "));
       heading.appendChild(permalink);
