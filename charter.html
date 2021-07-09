@@ -696,7 +696,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const permalink = document.createElement("a");
     permalink.href = "#" + heading.getAttribute("id");
     permalink.className = "permalink";
-    let sigil = "";
+    let prefix = "";
     if (headingElements.includes(heading.localName)) {
       const headingLevel = parseInt(heading.localName.substring(1), 10);
       console.log("saw an " + heading.localName + "headingLevel " + headingLevel);
@@ -708,9 +708,9 @@ document.addEventListener("DOMContentLoaded", function() {
       while (sectionNumber.endsWith(".0")) {
         sectionNumber = sectionNumber.slice(0, -2);
       }
-      sigil = "§" + sectionNumber + ".";
+      prefix = sectionNumber + ".";
     }
-    permalink.appendChild(document.createTextNode(sigil));
+    permalink.appendChild(document.createTextNode(prefix));
     if (heading.localName == "tr") {
       heading = heading.children[0]; // the `th` row heading
     }
