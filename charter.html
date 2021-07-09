@@ -691,35 +691,32 @@ Commons Attribution 4.0 International License</a>.</small>
 <script>
 document.addEventListener("DOMContentLoaded", function() {
   let sectionCounters = [NaN, 0, 0, 0, 0, 0, 0];
-  document.querySelectorAll("[id]").forEach(function(heading) {
-    let sectionNumber = "";
-    if (heading instanceof HTMLHeadingElement) {
-      const headingLevel = parseInt(heading.localName.substring(1), 10);
+  document.querySelectorAll("[id]").forEach(function(elementWithID) {
+    const permalink = document.createElement("a");
+    permalink.href = "#" + elementWithID.getAttribute("id");
+    if (elementWithID instanceof HTMLHeadingElement) {
+      const headingLevel = parseInt(elementWithID.localName.substring(1), 10);
       sectionCounters[headingLevel]++;
       for (let i = headingLevel+1; i < 7; i++) {
         sectionCounters[i] = 0;
       }
-      sectionNumber = sectionCounters.slice(2);
+      let sectionNumber = sectionCounters.slice(2);
       while (sectionNumber[sectionNumber.length-1] == 0) {
         sectionNumber.pop();
       }
-      sectionNumber = sectionNumber.join(".") + ".";
+      sectionNumber = sectionNumber.join(".");
+      permalink.appendChild(document.createTextNode(sectionNumber + "."));
+    } else if (elementWithID instanceof HTMLTableRowElement) {
+      elementWithID = elementWithID.children[0]; // the `th` row heading
     }
-    const permalink = document.createElement("a");
-    permalink.href = "#" + heading.getAttribute("id");
-    permalink.className = "permalink";
-    permalink.appendChild(document.createTextNode(sectionNumber));
-    if (heading instanceof HTMLTableRowElement) {
-      heading = heading.children[0]; // the `th` row heading
-    }
-    if (heading.firstChild instanceof HTMLAnchorElement) {
+    if (elementWithID.firstChild instanceof HTMLAnchorElement) {
       permalink.appendChild(document.createTextNode("#"));
-      heading.appendChild(document.createTextNode(" "));
-      heading.appendChild(permalink);
+      elementWithID.appendChild(document.createTextNode(" "));
+      elementWithID.appendChild(permalink);
     } else {
       permalink.appendChild(document.createTextNode(" "));
-      permalink.appendChild(heading.firstChild);
-      heading.appendChild(permalink);
+      permalink.appendChild(elementWithID.firstChild);
+      elementWithID.appendChild(permalink);
     }
   });
 });
