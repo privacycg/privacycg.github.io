@@ -708,7 +708,7 @@ document.addEventListener("DOMContentLoaded", function() {
       while (sectionNumber.endsWith(".0")) {
         sectionNumber = sectionNumber.slice(0, -2);
       }
-      sigil = "§" + sectionNumber + ". ";
+      sigil = "§" + sectionNumber + ".";
     }
     permalink.appendChild(document.createTextNode(sigil));
     if (heading.localName == "tr") {
