@@ -708,7 +708,13 @@ document.addEventListener("DOMContentLoaded", function() {
     let permalink = document.createElement("a");
     permalink.href = "#" + heading.getAttribute("id");
     permalink.className = "permalink";
-    permalink.appendChild(document.createTextNode("#"));
+    let sigil;
+    if (["h1", "h2", "h3", "h4", "h5", "h6"].includes(heading.localName)) {
+      sigil = document.createTextNode("§");
+    } else {
+      sigil = document.createTextNode("#");
+    }
+    permalink.appendChild(sigil);
     if (heading.localName == "tr") {
       heading = heading.children[0];
     }
