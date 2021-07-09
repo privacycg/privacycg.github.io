@@ -34,20 +34,6 @@
   *:target {
     background-color: yellow;
   }
-  .permalink {
-    color: #99f;
-    font-weight: normal;
-  }
-  .permalink {
-    display: block;
-    margin-left: -2ch;
-    float: left;
-  }
-  table .permalink {
-    display: inline;
-    margin-left: 0;
-    float: none;
-  }
   .note, .example {
     position: relative;
     margin: 1.5em 0 1em;
@@ -704,22 +690,39 @@ Commons Attribution 4.0 International License</a>.</small>
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
+  const headingElements = ["h1", "h2", "h3", "h4", "h5", "h6"];
+  let sectionCounters = [NaN, 0, 0, 0, 0, 0, 0];
   document.querySelectorAll("[id]").forEach(function(heading) {
-    let permalink = document.createElement("a");
+    const permalink = document.createElement("a");
     permalink.href = "#" + heading.getAttribute("id");
     permalink.className = "permalink";
-    let sigil;
-    if (["h1", "h2", "h3", "h4", "h5", "h6"].includes(heading.localName)) {
-      sigil = document.createTextNode("§");
-    } else {
-      sigil = document.createTextNode("#");
+    let sigil = "";
+    if (headingElements.includes(heading.localName)) {
+      const headingLevel = parseInt(heading.localName.substring(1), 10);
+      console.log("saw an " + heading.localName + "headingLevel " + headingLevel);
+      sectionCounters[headingLevel]++;
+      for (let i = headingLevel+1; i < 7; i++) {
+        sectionCounters[i] = 0;
+      }
+      let sectionNumber = sectionCounters.slice(2).join(".");
+      while (sectionNumber.endsWith(".0")) {
+        sectionNumber = sectionNumber.slice(0, -2);
+      }
+      sigil = "§" + sectionNumber + ". ";
     }
-    permalink.appendChild(sigil);
+    permalink.appendChild(document.createTextNode(sigil));
     if (heading.localName == "tr") {
-      heading = heading.children[0];
+      heading = heading.children[0]; // the `th` row heading
     }
-    heading.appendChild(document.createTextNode(" "));
-    heading.appendChild(permalink);
+    if (heading.firstChild.localName == "a") {
+      permalink.appendChild(document.createTextNode("#"));
+      heading.appendChild(document.createTextNode(" "));
+      heading.appendChild(permalink);
+    } else {
+      permalink.appendChild(document.createTextNode(" "));
+      permalink.appendChild(heading.firstChild);
+      heading.appendChild(permalink);
+    }
   });
 });
 </script>
