@@ -697,13 +697,8 @@ document.addEventListener("DOMContentLoaded", function() {
     if (elementWithID instanceof HTMLHeadingElement) {
       const headingLevel = parseInt(elementWithID.localName.substring(1), 10);
       sectionCounters[headingLevel]++;
-      for (let i = headingLevel+1; i < 7; i++) {
-        sectionCounters[i] = 0;
-      }
-      let sectionNumber = sectionCounters.slice(2);
-      while (sectionNumber[sectionNumber.length-1] == 0) {
-        sectionNumber.pop();
-      }
+      sectionCounters.fill(0, headingLevel + 1);
+      let sectionNumber = sectionCounters.slice(0, headingLevel + 1).filter(item => item != 0);
       sectionNumber = sectionNumber.join(".");
       permalink.appendChild(document.createTextNode(sectionNumber + "."));
     } else if (elementWithID instanceof HTMLTableRowElement) {
