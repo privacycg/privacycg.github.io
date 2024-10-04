@@ -302,15 +302,16 @@ the <a href=#chairs>Chairs</a>.
         <a href=https://github.com/privacycg/storage-access-headers>Headers</a>,
         <a href=https://github.com/privacycg/saa-non-cookie-storage>Non-Cookie</a>, and
         <a href=https://github.com/privacycg/requestStorageAccessFor>rSA4</a>)
-      <td><a href=https://github.com/johannhof>Johann Hofmann</a>,
-        <a href=https://github.com/johnwilander>John Wilander</a>,
-        <a href=https://github.com/hober>Theresa O’Connor</a>
+      <td><a href=https://github.com/bvandersloot-mozilla>Benjamin VanderSloot</a>,
+        <a href=https://github.com/johannhof>Johann Hofmann</a>,
+        <a href=https://github.com/annevk>Anne van Kesteren</a>
       <td><a href=https://html.spec.whatwg.org/>HTML</a> &amp;
         <a href=https://storage.spec.whatwg.org/>Storage</a> standards
     </tr>
     <tr id=nav-tracking>
       <th><a href=https://privacycg.github.io/nav-tracking-mitigations/>Navigational-Tracking Mitigations</a>
-      <td><a href=https://github.com/pes10k>Pete Snyder</a> &amp;
+      <td><a href=https://github.com/wanderview>Ben Kelly</a>,
+        <a href=https://github.com/pes10k>Pete Snyder</a>,
         <a href=https://github.com/jyasskin>Jeffrey Yasskin</a>
       <td><a href=https://fetch.spec.whatwg.org/>Fetch</a> &amp;
         <a href=https://html.spec.whatwg.org/>HTML</a> standards
@@ -701,15 +702,15 @@ Commons Attribution 4.0 International License</a>.</small>
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-  let sectionCounters = [NaN, 0, 0, 0, 0, 0, 0];
+  let sectionCounters = [0, 0, 0, 0, 0, 0, 0];
   document.querySelectorAll("[id]").forEach(function(elementWithID) {
     const permalink = document.createElement("a");
     permalink.href = "#" + elementWithID.getAttribute("id");
     if (elementWithID instanceof HTMLHeadingElement) {
       const headingLevel = parseInt(elementWithID.localName.substring(1), 10);
-      sectionCounters[headingLevel]++;
-      sectionCounters.fill(0, headingLevel + 1);
-      let sectionNumber = sectionCounters.slice(0, headingLevel + 1).filter(item => item != 0);
+      sectionCounters[headingLevel - 1]++;
+      sectionCounters.fill(0, headingLevel);
+      let sectionNumber = sectionCounters.slice(0, headingLevel).filter(item => item != 0);
       sectionNumber = sectionNumber.join(".");
       permalink.appendChild(document.createTextNode(sectionNumber + "."));
     } else if (elementWithID instanceof HTMLTableRowElement) {
